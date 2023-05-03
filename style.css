@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+}
+
+/* Header */
+header{
+    background-color: white;
+}
+
+header p{
+    color: black;
+}
+
+    /* Nav */
+.Nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.logo{
+    padding-left: 15px;
+    height: 35px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav p{
+    padding: 16px;
+}
+
+nav p:nth-of-type(1){
+    background-color: red;
+    color: white;
+}
+
+nav p:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.social-media{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.social-media img{
+    height: 30px;
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.NavButSmaller{
+    height: 50px;
+    width: 50px;
+    background-image: url(./Materiale/ic_menu_black_24px.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.NavButSmaller:hover{
+    background-color: red;
+    background-image: url(./Materiale/ic_menu_white_24px.svg);
+    transition: 0.33s;
+}
+
+.Dropdown{
+    z-index: 1;
+    display: none;
+    background-color: black;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.Dropdown p{
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+}
+
+.Dropdown p:nth-of-type(1){
+    background-color: red;
+}
+
+.Dropdown p:hover{
+    color: black;
+    background-color: white;
+    transition: 1s;
+}
+
+@media screen and (max-width: 960px)
+{
+    nav
+    {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px)
+{
+    .NavButSmaller
+    {
+        display: none;
+    }
+}
+
+    /* 2nd Nav */
+.logo-2{
+    background-image: url(./Materiale/hero.jpg);
+    background-size: 1400px;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-2 img{
+    border-style: solid;
+    border-color: white;
+    border-width: 25px;
+}
+
+/* Main */
+main{
+    background-color: rgb(233, 233, 233);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+main h3{
+    color: white;
+}
+
+    /* article */
+.articles article{
+    padding: 10px;
+}
+
+.article-header{
+    background-color: red;
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+}
+
+.article-header h3{
+    padding-left: 10px;
+}
+
+.article-img{
+    display: block;
+    width: 100%;
+}
+
+.article-text{
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.article-text button{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    /* sidebars */
+.sidebars article{
+    padding: 10px;
+}
+
+.sidebar-header{
+    background-color: black;
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+}
+
+.sidebar-header h3{
+    padding-left: 10px;
+}
+
+.sidebar-Nyhedsbrev{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.event{
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.event:nth-child(even){
+    background-color: lightgray;
+}
+
+.sidebars article:nth-of-type(1) p:nth-child(even){
+    padding-left: 20px;
+    padding-right: 60px;
+}
+
+.sidebars article:nth-of-type(1) p:nth-child(odd){
+    white-space: nowrap
+}
+
+.sidebar-Nyhedsbrev{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.sidebar-Nyhedsbrev br{
+    display: block;
+    content: "";
+    margin: 5px;
+}
+
+.sidebar-Nyhedsbrev p{
+    padding-right: 60px;
+}
+
+.sidebar-Nyhedsbrev input{
+    padding: 5px;
+}
+
+.sidebar-Nyhedsbrev button{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    /* grid and @media */
+.articles{
+    grid-area: Articles;
+}
+
+.articles article:nth-of-type(1){
+    grid-area: Velkommen;
+}
+
+.articles article:nth-of-type(2){
+    grid-area: Klubaftener;
+}
+
+.articles article:nth-of-type(3){
+    grid-area: Medlemskabb;
+}
+
+.sidebars {
+    grid-area: Sidebars;
+}
+
+.sidebars article:nth-of-type(1){
+    grid-area: Eventkalender;
+}
+
+.sidebars article:nth-of-type(2){
+    grid-area: Nyhedsbrev;
+}
+
+@media screen and (min-width: 0px)
+{
+    main{
+        padding-left: 10px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: auto;
+        grid-template-areas: 
+            "Articles" 
+            "Sidebars";  
+    }
+
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: auto;
+        grid-template-areas: 
+            "Velkommen" 
+            "Klubaftener"
+            "Medlemskabb";      
+    }
+
+    .sidebars {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: auto;
+        grid-template-areas: 
+            "Eventkalender" 
+            "Nyhedsbrev";  
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    main{
+        padding-left: 10px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-row: auto;
+        grid-template-areas: 
+            "Articles Sidebars"
+    }
+
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: auto;
+        grid-template-areas:
+            "Velkommen" 
+            "Klubaftener"
+            "Medlemskabb"
+    }
+
+    .sidebars {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 960px)
+{
+    main{
+        padding-left: 15%;
+        padding-right: 15%;
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+        grid-row: auto;
+        grid-template-areas: 
+            "Articles Sidebars";
+    }
+
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 2fr 1fr;
+        grid-template-areas: 
+            "Velkommen Velkommen"
+            "Klubaftener Medlemskabb";    
+    }
+
+    .sidebars {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+footer section{
+    padding: 20px 0px 20px 0px;
+    width: 25%;
+}
+
+footer h2{
+    color: red;
+    padding-bottom: 5px;
+}
+
+footer p{
+    color: white;
+}
+
+@media screen and (max-width: 960px)
+{
+    footer
+    {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer section
+    {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 960px)
+{
+    footer
+    {
+        flex-direction: row;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    footer section
+    {
+        width: 25%;
+    }
+}
